@@ -1,0 +1,36 @@
+/* Class = "UILabel"; text = "O continua con: "; ObjectID = "80M-8U-V1p"; */
+"80M-8U-V1p.text" = "Ou continue avec :";
+
+/* Class = "UILabel"; text = "¿Qué te motiva a practicar francés?"; ObjectID = "922-5q-gVT"; */
+"922-5q-gVT.text" = "Qu'est-ce qui te motive à pratiquer le français ?";
+
+/* Class = "UILabel"; text = "Terminos de servicio. Puedes eliminar tu cuenta en tus configuraciones."; ObjectID = "9MX-bx-wB9"; */
+"9MX-bx-wB9.text" = "Conditions d'utilisation. Vous pouvez supprimer votre compte dans vos paramètres.";
+
+/* Class = "UILabel"; text = "Bonjour !"; ObjectID = "OS2-hR-cco"; */
+"OS2-hR-cco.text" = "Bonjour !";
+
+/* Class = "UITextField"; placeholder = "Escribe tu correo"; ObjectID = "aZ3-FZ-QOw"; */
+"aZ3-FZ-QOw.placeholder" = "Entrez votre e-mail";
+
+/* Class = "UIButton"; configuration.title = "Haz Login con tu email"; ObjectID = "cwf-S1-9HI"; */
+"cwf-S1-9HI.configuration.title" = "Connectez-vous avec votre e-mail";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cwf-S1-9HI"; */
+"cwf-S1-9HI.normalTitle" = "Bouton";
+
+/* Class = "UIButton"; configuration.title = "Siguiente"; ObjectID = "fyp-zc-KUt"; */
+"fyp-zc-KUt.configuration.title" = "Suivant";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fyp-zc-KUt"; */
+"fyp-zc-KUt.normalTitle" = "Bouton";
+
+/* Class = "UIButton"; configuration.title = "ENTRAR"; ObjectID = "uoG-bf-WLm"; */
+"uoG-bf-WLm.configuration.title" = "Entrer";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uoG-bf-WLm"; */
+"uoG-bf-WLm.normalTitle" = "Bouton";
+
+/* Class = "UITextField"; placeholder = "Escribe tu contraseña"; ObjectID = "xSA-10-CUO"; */
+"xSA-10-CUO.placeholder" = "Entrez votre mot de passe";
+

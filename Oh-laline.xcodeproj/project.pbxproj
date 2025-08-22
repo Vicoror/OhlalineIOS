@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		57538CC72E52A453003FC3AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57538CC52E52A453003FC3AC /* Main.storyboard */; };
 		57538CC92E52A457003FC3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57538CC82E52A457003FC3AC /* Assets.xcassets */; };
 		57538CCC2E52A457003FC3AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57538CCA2E52A457003FC3AC /* LaunchScreen.storyboard */; };
+		57538CD42E52C9F8003FC3AC /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57538CD32E52C9F8003FC3AC /* QuizViewController.swift */; };
+		57538CD62E539746003FC3AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57538CD52E539746003FC3AC /* LoginViewController.swift */; };
+		57538CE62E53D470003FC3AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57538CE42E53D470003FC3AC /* Localizable.strings */; };
+		577BB8732E8F0E2C000AC46B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BB8722E8F0E2C000AC46B /* HomeViewController.swift */; };
+		577BB8752E8F245B000AC46B /* PhrasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BB8742E8F245B000AC46B /* PhrasesViewController.swift */; };
+		577BB87A2E903739000AC46B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577BB8782E903739000AC46B /* Model.xcdatamodeld */; };
+		577BB87C2E905E77000AC46B /* frases.json in Resources */ = {isa = PBXBuildFile; fileRef = 577BB87B2E905E77000AC46B /* frases.json */; };
+		577BB87E2E906173000AC46B /* PhrasesEx1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BB87D2E906173000AC46B /* PhrasesEx1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,20 @@
 		57538CC82E52A457003FC3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57538CCB2E52A457003FC3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57538CCD2E52A457003FC3AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57538CD32E52C9F8003FC3AC /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = SOURCE_ROOT; };
+		57538CD52E539746003FC3AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		57538CD92E53BECC003FC3AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		57538CDA2E53BECC003FC3AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		57538CDB2E53BF02003FC3AC /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		57538CDC2E53BF02003FC3AC /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		57538CE52E53D470003FC3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "Oh-laline/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		57538CE72E53D497003FC3AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "Oh-laline/fr.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		57538CE82E53D49A003FC3AC /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "Oh-laline/en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		577BB8722E8F0E2C000AC46B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		577BB8742E8F245B000AC46B /* PhrasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesViewController.swift; sourceTree = "<group>"; };
+		577BB8792E903739000AC46B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		577BB87B2E905E77000AC46B /* frases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = frases.json; sourceTree = "<group>"; };
+		577BB87D2E906173000AC46B /* PhrasesEx1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesEx1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,10 +62,12 @@
 		57538CB32E52A453003FC3AC = {
 			isa = PBXGroup;
 			children = (
+				57538CE42E53D470003FC3AC /* Localizable.strings */,
 				57538CBE2E52A453003FC3AC /* Oh-laline */,
 				57538CBD2E52A453003FC3AC /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		57538CBD2E52A453003FC3AC /* Products */ = {
 			isa = PBXGroup;
@@ -56,6 +80,9 @@
 		57538CBE2E52A453003FC3AC /* Oh-laline */ = {
 			isa = PBXGroup;
 			children = (
+				577BB8742E8F245B000AC46B /* PhrasesViewController.swift */,
+				577BB87D2E906173000AC46B /* PhrasesEx1ViewController.swift */,
+				577BB8782E903739000AC46B /* Model.xcdatamodeld */,
 				57538CBF2E52A453003FC3AC /* AppDelegate.swift */,
 				57538CC12E52A453003FC3AC /* SceneDelegate.swift */,
 				57538CC32E52A453003FC3AC /* ViewController.swift */,
@@ -63,6 +90,10 @@
 				57538CC82E52A457003FC3AC /* Assets.xcassets */,
 				57538CCA2E52A457003FC3AC /* LaunchScreen.storyboard */,
 				57538CCD2E52A457003FC3AC /* Info.plist */,
+				57538CD32E52C9F8003FC3AC /* QuizViewController.swift */,
+				57538CD52E539746003FC3AC /* LoginViewController.swift */,
+				577BB8722E8F0E2C000AC46B /* HomeViewController.swift */,
+				577BB87B2E905E77000AC46B /* frases.json */,
 			);
 			path = "Oh-laline";
 			sourceTree = "<group>";
@@ -103,14 +134,16 @@
 				};
 			};
 			buildConfigurationList = 57538CB72E52A453003FC3AC /* Build configuration list for PBXProject "Oh-laline" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				"en-GB",
 			);
 			mainGroup = 57538CB32E52A453003FC3AC;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 57538CBD2E52A453003FC3AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57538CE62E53D470003FC3AC /* Localizable.strings in Resources */,
+				577BB87C2E905E77000AC46B /* frases.json in Resources */,
 				57538CCC2E52A457003FC3AC /* LaunchScreen.storyboard in Resources */,
 				57538CC92E52A457003FC3AC /* Assets.xcassets in Resources */,
 				57538CC72E52A453003FC3AC /* Main.storyboard in Resources */,
@@ -140,7 +175,13 @@
 			files = (
 				57538CC42E52A453003FC3AC /* ViewController.swift in Sources */,
 				57538CC02E52A453003FC3AC /* AppDelegate.swift in Sources */,
+				577BB87E2E906173000AC46B /* PhrasesEx1ViewController.swift in Sources */,
+				577BB8752E8F245B000AC46B /* PhrasesViewController.swift in Sources */,
+				577BB87A2E903739000AC46B /* Model.xcdatamodeld in Sources */,
 				57538CC22E52A453003FC3AC /* SceneDelegate.swift in Sources */,
+				57538CD62E539746003FC3AC /* LoginViewController.swift in Sources */,
+				57538CD42E52C9F8003FC3AC /* QuizViewController.swift in Sources */,
+				577BB8732E8F0E2C000AC46B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +192,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				57538CC62E52A453003FC3AC /* Base */,
+				57538CD92E53BECC003FC3AC /* fr */,
+				57538CDB2E53BF02003FC3AC /* en-GB */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -159,8 +202,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				57538CCB2E52A457003FC3AC /* Base */,
+				57538CDA2E53BECC003FC3AC /* fr */,
+				57538CDC2E53BF02003FC3AC /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		57538CE42E53D470003FC3AC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57538CE52E53D470003FC3AC /* Base */,
+				57538CE72E53D497003FC3AC /* fr */,
+				57538CE82E53D49A003FC3AC /* en-GB */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -170,6 +225,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -216,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -230,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -270,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q7V62Z6M57;
+				DEVELOPMENT_TEAM = PHYRAN2AXZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Oh-laline/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,11 +357,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.Oh-laline";
+				PRODUCT_BUNDLE_IDENTIFIER = "Oh-laline";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q7V62Z6M57;
+				DEVELOPMENT_TEAM = PHYRAN2AXZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Oh-laline/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,11 +388,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.Oh-laline";
+				PRODUCT_BUNDLE_IDENTIFIER = "Oh-laline";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +421,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		577BB8782E903739000AC46B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				577BB8792E903739000AC46B /* Model.xcdatamodel */,
+			);
+			currentVersion = 577BB8792E903739000AC46B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 57538CB42E52A453003FC3AC /* Project object */;
 }

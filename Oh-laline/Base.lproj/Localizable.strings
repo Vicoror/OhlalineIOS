@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Oh-laline
+
+  Created by Victoria Ortega on 18/08/25.
+  
+*/
+"greeting_label" = "Bonjour !";
+"login_email_button" = "Haz Login con tu email";
+"next_button" = "Siguiente";
+"label_viajar" = "Viajar";
+"label_estudios" = "Estudios";
+"label_trabajo" = "Trabajo";
+"label_hobby" = "Hobby";
+"label_examen" = "Examen";
+"label_otro" = "Otro";
+"enter_button" = "ENTRAR";
+
