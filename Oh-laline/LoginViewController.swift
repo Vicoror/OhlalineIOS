@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController {
     
@@ -17,6 +18,10 @@ class LoginViewController: UIViewController {
         f.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return f
     }()
+    
+    // Contexto de Core Data
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     @IBAction func quizButton(_ sender: UIButton) {
         botonTouch()
@@ -34,12 +39,19 @@ class LoginViewController: UIViewController {
         //  Escuchar cuando aparece y desaparece el teclado
         NotificationCenter.default.addObserver(self, selector: #selector(tecladoAparece(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(tecladoDesaparece(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        // Cargar último login guardado en Core Data (opcional, si quieres mostrarlo en campos)
+        cargarUltimoLogin()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Recuperar último login guardado
+        verificarConexionAntesDeContinuar(startAction: {
+                print("El usuario está conectado.")
+            })
+        
+        // Recuperar último login guardado en UserDefaults
         let yaHizoLogin = UserDefaults.standard.string(forKey: "inicioSesion") ?? ""
         if !(yaHizoLogin.isEmpty) {
             if let antes = df.date(from: yaHizoLogin) {
@@ -57,8 +69,12 @@ class LoginViewController: UIViewController {
     @objc func botonTouch() {
         var mensaje = ""
         
+        print("🔵 botonTouch() ejecutado")
+        
         if let correo = email.text,
            let pass = password.text {
+            
+            print("📝 Email: \(correo), Password: \(pass)")
             
             if correo.isEmpty || pass.isEmpty {
                 mensaje = "Ambos campos son requeridos"
@@ -75,19 +91,28 @@ class LoginViewController: UIViewController {
         }
         
         if mensaje.isEmpty {
+            print("✅ Validaciones pasadas, guardando datos...")
+            
             // Guardar la fecha/hora de login
             let hoy = Date()
             UserDefaults.standard.set(df.string(from: hoy), forKey: "inicioSesion")
             
+            // Guardar en Core Data
+            if let correo = email.text, let pass = password.text {
+                print("🔄 Llamando a guardarLoginCoreData...")
+                guardarLoginCoreData(email: correo, password: pass)
+            }
+            
             // Ir al home
+            print("🏠 Llamando a irAHome...")
             irAHome()
         } else {
+            print("❌ Error: \(mensaje)")
             mostrarAlerta(mensaje)
         }
     }
     
     func irAHome() {
-        // Si usas segue conectado en storyboard:
         performSegue(withIdentifier: "segueQuiz", sender: self)
     }
     
@@ -111,7 +136,7 @@ class LoginViewController: UIViewController {
         password.isSecureTextEntry = true
     }
     
-    //  MARK: - Manejo de teclado
+    // MARK: - Manejo de teclado
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -119,7 +144,6 @@ class LoginViewController: UIViewController {
     @objc func tecladoAparece(_ notification: Notification) {
         if let userInfo = notification.userInfo,
            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
-            // Subir vista cuando aparece el teclado
             let alturaTeclado = keyboardFrame.height
             if self.view.frame.origin.y == 0 {
                 self.view.frame.origin.y -= alturaTeclado / 2
@@ -128,9 +152,63 @@ class LoginViewController: UIViewController {
     }
     
     @objc func tecladoDesaparece(_ notification: Notification) {
-        // Regresar la vista a su lugar
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
+        }
+    }
+    
+    // MARK: - Core Data
+    
+    func guardarLoginCoreData(email: String, password: String) {
+        print("💾 guardarLoginCoreData iniciado")
+        print("📧 Email a guardar: \(email)")
+        print("🔑 Password a guardar: \(password)")
+        
+        let nuevoUsuario = Login(context: context)
+        nuevoUsuario.id_user = UUID()
+        nuevoUsuario.email = email
+        nuevoUsuario.password = password
+        nuevoUsuario.dateLogin = Date()
+        nuevoUsuario.motivationQuiz = 0
+        nuevoUsuario.userPro = false
+
+        do {
+            try context.save()
+            print("✅ Login guardado correctamente en Core Data")
+        } catch {
+            print("❌ Error al guardar login: \(error)")
+            print("❌ Error details: \(error.localizedDescription)")
+        }
+
+        // Mostrar todos los logins guardados en consola
+        let request: NSFetchRequest<Login> = Login.fetchRequest()
+        do {
+            let logins = try context.fetch(request)
+            print("📊 Total de logins en BD: \(logins.count)")
+            for login in logins {
+                print("🔹 Email: \(login.email ?? "") | Password: \(login.password ?? "") | Fecha: \(login.dateLogin ?? Date())")
+            }
+        } catch {
+            print("❌ Error al leer logins: \(error)")
+        }
+    }
+    
+    
+    
+    func cargarUltimoLogin() {
+        let request: NSFetchRequest<Login> = Login.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "dateLogin", ascending: false)
+        request.sortDescriptors = [sortDescriptor]
+        request.fetchLimit = 1
+        
+        do {
+            let usuarios = try context.fetch(request)
+            if let ultimo = usuarios.first {
+                email.text = ultimo.email
+                password.text = ultimo.password
+            }
+        } catch {
+            print("Error al cargar último login: \(error)")
         }
     }
 }

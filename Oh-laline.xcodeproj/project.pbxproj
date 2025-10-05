@@ -16,6 +16,10 @@
 		57538CD42E52C9F8003FC3AC /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57538CD32E52C9F8003FC3AC /* QuizViewController.swift */; };
 		57538CD62E539746003FC3AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57538CD52E539746003FC3AC /* LoginViewController.swift */; };
 		57538CE62E53D470003FC3AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57538CE42E53D470003FC3AC /* Localizable.strings */; };
+		5768F4782E923238009740CE /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768F4772E923238009740CE /* NetworkMonitor.swift */; };
+		5768F47A2E923602009740CE /* UIViewController+NetworkAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768F4792E923602009740CE /* UIViewController+NetworkAlert.swift */; };
+		5768F4A32E92D303009740CE /* Login+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768F4A22E92D303009740CE /* Login+CoreDataProperties.swift */; };
+		5768F4A42E92D303009740CE /* Login+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768F4A12E92D303009740CE /* Login+CoreDataClass.swift */; };
 		577BB8732E8F0E2C000AC46B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BB8722E8F0E2C000AC46B /* HomeViewController.swift */; };
 		577BB8752E8F245B000AC46B /* PhrasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577BB8742E8F245B000AC46B /* PhrasesViewController.swift */; };
 		577BB87A2E903739000AC46B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577BB8782E903739000AC46B /* Model.xcdatamodeld */; };
@@ -41,6 +45,10 @@
 		57538CE52E53D470003FC3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "Oh-laline/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		57538CE72E53D497003FC3AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "Oh-laline/fr.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		57538CE82E53D49A003FC3AC /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "Oh-laline/en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5768F4772E923238009740CE /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		5768F4792E923602009740CE /* UIViewController+NetworkAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NetworkAlert.swift"; sourceTree = "<group>"; };
+		5768F4A12E92D303009740CE /* Login+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5768F4A22E92D303009740CE /* Login+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		577BB8722E8F0E2C000AC46B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		577BB8742E8F245B000AC46B /* PhrasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesViewController.swift; sourceTree = "<group>"; };
 		577BB8792E903739000AC46B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -62,6 +70,8 @@
 		57538CB32E52A453003FC3AC = {
 			isa = PBXGroup;
 			children = (
+				5768F4A12E92D303009740CE /* Login+CoreDataClass.swift */,
+				5768F4A22E92D303009740CE /* Login+CoreDataProperties.swift */,
 				57538CE42E53D470003FC3AC /* Localizable.strings */,
 				57538CBE2E52A453003FC3AC /* Oh-laline */,
 				57538CBD2E52A453003FC3AC /* Products */,
@@ -82,6 +92,8 @@
 			children = (
 				577BB8742E8F245B000AC46B /* PhrasesViewController.swift */,
 				577BB87D2E906173000AC46B /* PhrasesEx1ViewController.swift */,
+				5768F4772E923238009740CE /* NetworkMonitor.swift */,
+				5768F4792E923602009740CE /* UIViewController+NetworkAlert.swift */,
 				577BB8782E903739000AC46B /* Model.xcdatamodeld */,
 				57538CBF2E52A453003FC3AC /* AppDelegate.swift */,
 				57538CC12E52A453003FC3AC /* SceneDelegate.swift */,
@@ -174,13 +186,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				57538CC42E52A453003FC3AC /* ViewController.swift in Sources */,
+				5768F47A2E923602009740CE /* UIViewController+NetworkAlert.swift in Sources */,
 				57538CC02E52A453003FC3AC /* AppDelegate.swift in Sources */,
 				577BB87E2E906173000AC46B /* PhrasesEx1ViewController.swift in Sources */,
 				577BB8752E8F245B000AC46B /* PhrasesViewController.swift in Sources */,
 				577BB87A2E903739000AC46B /* Model.xcdatamodeld in Sources */,
 				57538CC22E52A453003FC3AC /* SceneDelegate.swift in Sources */,
 				57538CD62E539746003FC3AC /* LoginViewController.swift in Sources */,
+				5768F4782E923238009740CE /* NetworkMonitor.swift in Sources */,
 				57538CD42E52C9F8003FC3AC /* QuizViewController.swift in Sources */,
+				5768F4A32E92D303009740CE /* Login+CoreDataProperties.swift in Sources */,
+				5768F4A42E92D303009740CE /* Login+CoreDataClass.swift in Sources */,
 				577BB8732E8F0E2C000AC46B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

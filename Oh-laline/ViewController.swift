@@ -27,5 +27,12 @@ class ViewController: UIViewController {
         if segue.identifier == "seguelogin" {
         }
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        verificarConexionAntesDeContinuar {
+            print("El usuario está conectado.")
+            // Aquí el código que debe continuar si hay conexión
+        }
+    }
 }

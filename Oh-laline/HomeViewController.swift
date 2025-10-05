@@ -9,7 +9,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        verificarConexionAntesDeContinuar {
+                   print("El usuario está conectado.")
+               }
         // Configurar bordes redondeados de todos los botones
         let botones = [btnPhrases, btnConjugaisons, btnVerbes]
         botones.forEach { button in

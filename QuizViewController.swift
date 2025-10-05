@@ -110,4 +110,14 @@ class QuizViewController: UIViewController {
             UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil)
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        verificarConexionAntesDeContinuar {
+            print("El usuario está conectado.")
+            // Aquí el código que debe continuar si hay conexión
+        }
+    }
 }
+

@@ -364,6 +364,16 @@ class PhrasesViewController: UIViewController {
             self.viewMsgPrincipal.alpha = 1
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        verificarConexionAntesDeContinuar {
+            print("El usuario está conectado.")
+            // Aquí el código que debe continuar si hay conexión
+        }
+    }
+    
 }
 
 // MARK: - UIGestureRecognizerDelegate
